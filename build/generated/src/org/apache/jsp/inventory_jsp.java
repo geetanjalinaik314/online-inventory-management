@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.sql.*;
 
 public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -30,7 +31,7 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html;charset=UTF-8");
+      response.setContentType("text/html");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -44,55 +45,63 @@ public final class inventory_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("        PRODUCTS AVAILABLE ARE<BR>\n");
-      out.write("      <table border=\"1\"  align=center  cellpadding=\"5\" cellspacing=\"7\">\n");
-      out.write("       \n");
-      out.write("       <tr>\n");
-      out.write("       <th>PRODUCT NAME   </th>\n");
-      out.write("       <th>QUANTITY</th>\n");
-      out.write("      <th colspan=\"3\">Fruits</th>\n");
-      out.write("       </tr>\n");
-      out.write("       <tr>\n");
-      out.write("         <th>   </th>\n");
-      out.write("          <th>   </th>\n");
-      out.write("          <th>mango</th>\n");
-      out.write("           <th>orange</th>\n");
-      out.write("           <th>apple</th>\n");
-      out.write("       </tr>\n");
-      out.write("      <tr>\n");
-      out.write("         <th  rowspan=\"3\">meals</th>\n");
-      out.write("         <th>Breakfast</th>\n");
-      out.write("         <td>1</td>\n");
-      out.write("         <td>1</td>\n");
-      out.write("         <td>1</td>\n");
-      out.write("      </tr>\n");
+      out.write("   <body>\n");
+      out.write("        <h3><center>PRODUCT DETAILS</center></h3>   \n");
+      out.write("        <table border= \"3px solid black\" align=\"center\" frame=\"box\" width=\"50%\" rowspan=\"40%\" colspan=\"30%\" cellpadding=\"20\" cellspacing=\"20\" >  \n");
+      out.write("            <tr>\n");
+      out.write("                <td >PRODUCT NAME</td>\n");
+      out.write("                <td>TYPE</td>\n");
+      out.write("                <td>AREA</td>\n");
+      out.write("                <td>COST</td>\n");
+      out.write("                <td>ORDER</td>\n");
+      out.write("               \n");
+      out.write("            </tr>\n");
+      out.write("        \n");
+      out.write("        ");
+   
+              
+            
+      
+
+                Class.forName("com.mysql.jdbc.Driver");
+                 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory","root","");
+                Statement st=con.createStatement();
+             
+                
+                ResultSet rs=st.executeQuery("select * from inv");
+              while(rs.next())
+                  {
+                       
       out.write("\n");
-      out.write("    <tr>\n");
-      out.write("       <th>lunch</th>\n");
-      out.write("       <td>2</td>\n");
-      out.write("       <td>0</td>\n");
-      out.write("       <td>2</td>\n");
+      out.write("              \n");
+      out.write("               \n");
+      out.write("               <tr>\n");
+      out.write("        <td>");
+ out.print(rs.getString(1));
+      out.write("</td>\n");
+      out.write("        <td>");
+out.print(rs.getString(2));
+      out.write("</td>\n");
+      out.write("        <td>");
+ out.print(rs.getString(3));
+      out.write("</td>\n");
+      out.write("        <td>");
+ out.print(rs.getString(4));
+      out.write("</td>\n");
+      out.write("        <td><a href=\"orderinv.jsp\"><input type=\"button\" value=\"order\"></td>            \n");
       out.write("    </tr>\n");
+      out.write(" ");
+ }
+              
       out.write("\n");
-      out.write("     <tr>\n");
-      out.write("        <th>dinner</th>\n");
-      out.write("         <td>3</td>\n");
-      out.write("         <td>3</td>\n");
-      out.write("        <td>3</td>\n");
-      out.write("    </tr>\n");
-      out.write("\n");
-      out.write("</table>\n");
-      out.write("<form>\n");
-      out.write("name<input type=\"date\"/></form>\n");
-      out.write("</body>\n");
-      out.write("</html>");
+      out.write("        </table>     \n");
+      out.write("    </body>\n");
+      out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

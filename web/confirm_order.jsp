@@ -13,9 +13,7 @@
         <title>JSP Page</title>
         
         <style>  
-            body{
-                background-image:linear-gradient(45deg,#e8a49c,white);
-            }
+            
            
             .center
            {
@@ -87,40 +85,36 @@
                        %>
               
                
-                      <center> <table bgcolor="white" width="50%" border="3" rowspan="30" colspan="30" cellpadding="2" cellspacing="5">  
-                    <tr><td> <table width="50%"  border="4" rowspan="30" colspan="30" cellpadding="2" cellspacing="5">          
-                    <center><h3> CONFIRM YOUR ORDER</h3></center>
-                     </table>
+                      <center> <table bgcolor="white" width="50%" frame="vsides" rowspan="60" colspan="30" cellpadding="7" cellspacing="8">  
+                    <tr><td> 
+                    <center><h1>CONFIRM ORDER</h1></center>
+                    
                         </td></tr>
                     
                     
                           
                     <tr><td>
-                <table width="50%" rowspan="30" colspan="30" cellpadding="2" cellspacing="20">              
+                  
    
-                    <tr><label>NAME-&nbsp;&nbsp;&nbsp;<% out.print(rs.getString(4));%></label></tr>
+                            <label>NAME:&nbsp;&nbsp;&nbsp;<% out.print(rs.getString(4));%></label></td></tr>
     
                 
                      
-                </table></td></tr>
-    
-                           
-                           
-                           <tr><td>  <table  rowspan="10" colspan="10" cellpadding="10" cellspacing="10" >  
-                                       <tr><label> DELIVERY ADDRESS:</label><br>
+                 
+                    <tr><td><h2> DELIVERY ADDRESS:</h2><br></td></tr>
                        
-                           <tr><td><label>ADDRESS-&nbsp&nbsp<%out.print(rs.getString(5));%></label></td></tr>
-                           <tr><td> <label>CITY-&nbsp&nbsp<%out.print(rs.getString(6));%></label></td></tr>
-        <tr><td> <label>STATE&nbsp&nbsp<% out.print(rs.getString(7));%></label></td></tr>
-        <tr><td><label>PINCODE&nbsp&nbsp<% out.print(rs.getString(8));%></label></td></tr></table>
+                           <tr><td><label>ADDRESS:&nbsp&nbsp<%out.print(rs.getString(5));%></label></td></tr>
+                           <tr><td> <label>CITY:&nbsp&nbsp<%out.print(rs.getString(6));%></label></td></tr>
+        <tr><td> <label>STATE:&nbsp&nbsp<% out.print(rs.getString(7));%></label></td></tr>
+        <tr><td><label>PINCODE:&nbsp&nbsp<% out.print(rs.getString(8));%></label></td></tr>
         
-        <tr><td>  <table width="60%" rowspan="20" colspan="30" cellpadding="15" cellspacing="20" >  
-                         <tr>
-                             <td><label>PRODUCT NAME&nbsp;&nbsp;<% out.print(rs.getString(2));%></label></td>
-                             <td> <label>QUANTITY&nbsp;&nbsp;&nbsp;<%out.print(rs.getString(3));%></label><br></tr></td>
+        <tr><td>  
+                         
+                             <label>PRODUCT NAME:&nbsp;&nbsp;<% out.print(rs.getString(2));%></label></td></tr>
+                         <tr> <td> <label>QUANTITY:&nbsp;&nbsp;&nbsp;<%out.print(rs.getString(3));%></label><br></tr></td>
             
                                
-                               </table></td></tr>
+                               
     
         <tr><td>  <table width="50%" rowspan="20" colspan="20" cellpadding="2" cellspacing="5" >  
                     <tr><td><label>TOTAL&nbsp;&nbsp;&nbsp;<% out.print(total);%></label></td></tr></table>

@@ -65,7 +65,7 @@
            
            body
            {
-               background-color:lightcyan;
+                background-image:url("images/bg3.jpeg");
                background-repeat:no-repeat;
                background-size:100% 100%;
                background-attachment:fixed;
@@ -78,14 +78,22 @@
                 font-family: Comic Sans MS;
                 font-size: 20px;
             }
+            
+            form {
+                     width: 80%;
+                     padding: 20px;
+                     border-radius: 6px;
+                
+                                }
            
            </style>
     </head>
     <body>
         <div class="box">
     <div class="center">
-        <h1>REGISTER FOR NEW USER</h1>
         <form name="f1" method="get" action="user2.jsp" onsubmit="return validatelogin()">
+        <h1>REGISTER FOR NEW USER</h1>
+        
             <img src="images/user4.png" width="160"><br><br>
             <label for="name">FULL NAME</label>&nbsp;&nbsp;<input type="text" name="name"><br><br>
             <label for="user">USERNAME</label>&nbsp;&nbsp;<input type="text" name="user"/><br><br>

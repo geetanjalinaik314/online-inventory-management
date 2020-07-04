@@ -9,24 +9,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-    </head>
+   </head>
+    
    <body>
-        <h3><center>PRODUCT DETAILS</center></h3>   
-        <table border= "3px solid black" align="center" frame="box" width="50%" rowspan="40%" colspan="30%" cellpadding="20" cellspacing="20" >  
-            <tr>
+        <h1><center>PRODUCT DETAILS</center></h1>   
+           <table border= "3px solid black" align="center" frame="box" width="50%" rowspan="40%" colspan="30%" cellpadding="20" cellspacing="20" >  
+               <tr>
                 <td >PRODUCT NAME</td>
                 <td>TYPE</td>
                 <td>AREA</td>
                 <td>COST</td>
                 <td>ORDER</td>
                
-            </tr>
+              </tr>
         
-        <%   
-              
-            
-      
-
+        <% 
                 Class.forName("com.mysql.jdbc.Driver");
                  Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory","root","");
                 Statement st=con.createStatement();

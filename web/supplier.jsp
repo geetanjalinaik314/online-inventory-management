@@ -35,60 +35,79 @@
             
             
             body{
-background-image:linear-gradient(#a3bded,#f5efef);
-background-repeat: no-repeat;
-background-size: cover;
-}
+                    
+                     background-repeat: no-repeat;
+                     background-size: cover;
+                }
+                
+                
            input[type=text] {
-  width: 30%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
+                         width: 30%;
+                         margin-bottom: 20px;
+                         padding: 12px;
+                         border: 1px solid black;
+                         border-radius: 3px;
+                 }
+                 label{
+		           font-size:20px;
+		           font-color:black;
+	        }
+			
 
 
-
-input[type=submit] {
-  width: 20%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  background-color: limegreen;
-}
+            input[type=submit] {
+                          width: 20%;
+                          margin-bottom: 20px;
+                          padding: 12px;
+                          border: 1px solid #ccc;
+                          border-radius: 15px;
+                          background-color: limegreen;
+                  }
+                  
+            form {
+                         width: 80%;
+                         padding: 20px;
+                         border-radius: 6px;
+                         
+                         box-shadow: 0 0 8px  #669999; 
+            }    
             
             
+            .banner {
+                     position: relative;
+                     height: 400px;
+                     background-image: url("images/supplier.webp");  
+                     background-size:cover;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-align: center;
+              }		 
             
-            .font
-            {
-                font-family: Comic Sans MS;
-                font-size: 20px;
-            }
             
         </style>
     </head>
-    <body>
-         <h1>SUPPLIER DETAILS</h1>
-        <h3>ENTER SUPPLIER DETAILS CAREFULLY</h3>
-        
+    <body>        
         <div class="box1">
-            <form name="f4" action="insertsupplier.jsp" method="post"  onsubmit="return validate()">
-              <img src="images/img2.png"  align="right" width="50%">
-           <label class="font">Supplier Name</label><br>
+            <center><form name="f4" action="insertsupplier.jsp" method="post"  onsubmit="return validate()">
+             <div class="banner">
+          <h1><font size="50px" color="black">New Supplier Details</font></h1>
+             </div><br><br>
+		
+           <label class="font">Supplier Name</label>
            <input type="text" pattern="[A-Za-z]+" name="sname" class="form-control" ><br> <br>
                
-              <label class="font">Supplier Number</label><br>
+              <label class="font">Supplier Number</label>
               <input type="text" name="snumber" class="form-control"  ><br> <br> 
                
-            <label class="font">Product Supplied</label><br>
+            <label class="font">Product Supplied</label>
             <input type="text" name="supplied" class="form-control" ><br>  <br>
              
            
-            <label  class="font">address</label><br>
+            <label  class="font">Address</label>
             <input type="text"  name="saddress" class="form-control" ><br><br>
            
-            <label  class="font">Contact Number</label><br>             
+            <label  class="font">Contact Number</label>            
             <input type="text"  name="contact" class="form-control" ><br><br>
               
            
@@ -98,7 +117,7 @@ input[type=submit] {
             
                   
                   
-        </form>
+        </form></center>
         </div>
     </body>
 </html>

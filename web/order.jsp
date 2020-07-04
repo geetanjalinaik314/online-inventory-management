@@ -16,12 +16,13 @@
             
             
             body{
-background-color:lightblue;
+background:url("images/inv2.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 }
            input[type=text] {
   width: 50%;
+  height: 20%;
   margin-bottom: 20px;
   padding: 12px;
   border: 1px solid #ccc;
@@ -41,13 +42,20 @@ input[type=submit] {
 
 
 label {
-  margin-bottom: 10px;
-  display: block;
-  font-size:130%;
-  //color: blue;
+    font-size: 20px;
+    clear:left;
+    text-align:right;
+    padding-right:10px;
 }
 
 
+form {
+                     background-color:whitesmoke;
+                     padding: 20px;
+                     border-radius: 6px;
+                     width:40%;
+                     box-shadow: 0 0 8px  #669999; 
+            }
 
    .span
    {
@@ -61,19 +69,16 @@ label {
        line-height:1;
        background-color:lightgrey;
    }
-   .col50
-   {
-       float:left;
-       width:50%;
-   }
+  
    
    
         </style>
     </head>
     <body>
-       
-        <h1>ENTER ORDER DETAILS</h1>
+    <center>
         <form name="f6" action="placeorder.jsp" method="post">
+        <h1>ENTER ORDER DETAILS</h1>
+        
             <label for="product"> Select Product Name</label>
              <%
 
@@ -87,7 +92,7 @@ label {
                 %>
            
                
-                 <select name="pname"  style="width:100px; height:30px;">
+                 <select name="pname"  style="width:400px; height:30px;">
                    <%
                      while(rs3.next())
                 {
@@ -100,35 +105,34 @@ label {
                  
      
               
-                
-            <h3>Delivery Address</h3>
-            <label for="fname"><img src="images/icon/user-480.png"  width="25"> Full Name</label>
-            <input type="text"  name="cname" placeholder="John M. Doe" required>
+              
+            <h2>Delivery Address</h2>
+            <label for="fname"><img src="images/icon/user-480.png"  width="25"><span> Full Name</span></label>
+            <input type="text"  name="cname" placeholder="John M. Doe" required><br>
             <label for="email"><img src="images/icon/download.png" width="25"> Email</label>
-            <input type="text"  name="email" placeholder="john@example.com">
-            <div class="col50"><label for="adr"><img src="images/icon/images.png" width="25"> Address</label>
-            <input type="text"  name="area" placeholder="542 W. 15th Street" required>
+            <input type="text"  name="email" placeholder="john@example.com"><br>
+            <label for="adr"><img src="images/icon/images.png" width="25"> Address</label>
+            <input type="text"  name="area" placeholder="542 W. 15th Street" required><br>
             <label for="city"><img src="images/icon/download (1).png" width="25"> City</label>
-            <input type="text" id="city" name="city" placeholder="New York">
-            </div>
-            <div class="col50">
-                <label for="state">State</label>
-                <input type="text"  name="state" placeholder="NY" required>
-            </div>
-            <div class="col50">
+            <input type="text" id="city" name="city" placeholder="New York"><br>
+           
+            <label for="state"><img src="images/icon/download (1).png" width="25">State</label>
+                <input type="text"  name="state" placeholder="NY" required><br>
+           
                 <label for="zip">Zip</label>
-                <input type="text"  name="pincode" placeholder="10001" required>
+                <input type="text"  name="pincode" placeholder="10001" required><br>
            
             
-                <br><br>
+                <br>
          
        
         
         <input type="submit" value="Continue to checkout" >
-     </div>
+     
   
  
         
         </form>
+    </center>
     </body>
 </html>

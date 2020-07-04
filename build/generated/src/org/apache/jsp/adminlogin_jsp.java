@@ -104,7 +104,7 @@ public final class adminlogin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("           \n");
       out.write("           body\n");
       out.write("           {\n");
-      out.write("               \n");
+      out.write("               background-image:linear-gradient(95deg,#f3dbcf,white,#f3dbcf);\n");
       out.write("               background-repeat:no-repeat;\n");
       out.write("               background-size:100% 100%;\n");
       out.write("               background-attachment:fixed;\n");

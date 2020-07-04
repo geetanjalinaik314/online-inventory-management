@@ -58,13 +58,13 @@
                margin:8px 0;
                padding:10px 4px;
                border:3px solid black;
-               background-color: green;
+               background-color: lightgreen;
                border-radius:30px;
            }
            
            body
            {
-               background-image:linear-gradient(95deg,#f3dbcf,white,#f3dbcf);
+               background-image:url("images/bg3.jpeg");
                background-repeat:no-repeat;
                background-size:100% 100%;
                background-attachment:fixed;
@@ -76,6 +76,7 @@
                
                 font-family: Comic Sans MS;
                 font-size: 20px;
+               
             }
            
            </style>

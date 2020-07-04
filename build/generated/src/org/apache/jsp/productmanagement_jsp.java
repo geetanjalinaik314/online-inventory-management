@@ -74,7 +74,7 @@ public final class productmanagement_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("            \n");
       out.write("            \n");
       out.write("             body{\n");
-      out.write("background-image:linear-gradient(25deg, white,blue);\n");
+      out.write("background-image:linear-gradient(#a3bded,#f5efef);\n");
       out.write("background-repeat: no-repeat;\n");
       out.write("background-size: cover;\n");
       out.write("}\n");

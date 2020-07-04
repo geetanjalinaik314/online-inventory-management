@@ -35,7 +35,7 @@
             
             
              body{
-background-image:linear-gradient(#a3bded,#f5efef);
+ background: #acb7ae;
 background-repeat: no-repeat;
 background-size: cover;
 }
@@ -48,6 +48,14 @@ background-size: cover;
 }
 
 
+form {
+                     width: 80%;
+                     padding: 20px;
+                     border-radius: 6px;
+                  background:#c2b490; 
+                     box-shadow: 0 0 8px  #669999; 
+            }
+
 
 input[type=submit] {
   width: 20%;
@@ -58,49 +66,61 @@ input[type=submit] {
   background-color: limegreen;
 }
             
+          .banner {
+                     position: relative;
+                     height: 300px;
+                     background-image: url("images/inv.jpg");  
+                     background-size:cover;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-align: center;
+              }		   
             
-            
-            .font
-            {
-                font-family: Comic Sans MS;
-                font-size: 20px;
-            }
+            label{
+		           font-size:20px;
+		           font-color:black;
+	        }
+			
             
         </style>
     </head>
     <body>
-         <h1>PRODUCT DETAILS</h1>
-        <h3>ENTER PRODUCT DETAILS CAREFULLY</h3>
-        
         <div class="box1">
+            <center>
             <form name="f4" action="insertproduct.jsp" method="post" onsubmit="return validate()">
-              <img src="images/icon/product.jpg"  align="right" width=700>
-           <label class="font">Product Name</label><br>
+                <div class="banner">
+          <h1><font size="100px" color="black">Product Entry</font></h1>
+        </div>
+		<br><br>
+                
+             
+           <label class="font">Product Name</label>
            <input type="text" pattern="[A-Za-z]+" name="pname" class="form-control" ><br> <br>
                
-              <label class="font">Product Type</label><br>
+              <label class="font">Product Type</label>
               <input type="text" name="ptype" class="form-control"  ><br> <br> 
                
-            <label class="font">Product Area</label><br>
+            <label class="font">Product Area</label>
             <input type="text" name="parea" class="form-control" ><br>  <br>
             
              
            
-            <label  class="font">Product Cost Per Unit</label><br>             
+            <label  class="font">Cost Per Unit</label>            
             <input type="text"  name="pcost" class="form-control" ><br><br>
               
            
-            <label class="font">Product Manufacturer</label><br>
+            <label class="font">Manufacturer</label>
             <input type="text" name="pmanufacture" class="form-control"  ><br> <br>
             
-            <label  class="font">Number of Products Available in Stock</label><br>
+            <label  class="font">Products Available in Stock</label>
             <input type="text" name="pnumber" class="form-control"  ><br><br> 
             
                          <input type="submit"  value="SUBMIT">
             
                   
                   
-        </form>
+            </form></center>
         </div>
     </body>
 </html>

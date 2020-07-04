@@ -22,13 +22,17 @@
            
                 
                 
-                String name=request.getParameter("cname");
-                String phone=request.getParameter("cphone");
-                 String add=request.getParameter("caddress");
-                 String email=request.getParameter("cemail");
+                String name=request.getParameter("fname");
+                String lname=request.getParameter("lname");
+                String phone=request.getParameter("phone");
+                 String add=request.getParameter("address1");
+                 String email=request.getParameter("eaddress");
+               String state=request.getParameter("state");
+                 String zip=request.getParameter("zip");
+                 String city=request.getParameter("city");
                
 
-               int i=st.executeUpdate("insert into customer(cname,cphone,caddress,cemail) values('"+name+"','"+phone+"','"+add+"','"+email+"')");
+               int i=st.executeUpdate("insert into customer(fname,lname,phone,address,email,state,pin,city) values('"+name+"','"+lname+"','"+phone+"','"+add+"','"+email+"','"+state+"','"+zip+"','"+city+"')");
                 
                 if(i>0)
                 {

@@ -12,6 +12,21 @@ background-size: cover;
 }
 
 
+
+.banner {
+                     position: relative;
+                     height: 700px;
+                     background-image: url("images/inv2.jpg");  
+                     background-size:cover;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-align: center;
+                     
+              }		 
+
+
+
 p{
   
                     text-indent:15em;
@@ -63,11 +78,18 @@ h1{
         <a href="adminlogin.jsp" style="color:black">ADMIN LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;</div>
         
+<div class="container">
 
-<marquee scrollamount="15"><img src="images/img2.png"  width=700   height=500>&nbsp&nbsp&nbsp<img src="images/bg.jpeg"  width=700   height=500>&nbsp&nbsp&nbsp<img src="images/inv_1.jpg" width=700   height=500>&nbsp&nbsp&nbsp<img src="images/inv2.jpg"  width=700  height=500>&nbsp&nbsp&nbsp</marquee>	
+<div class="sliding-background"></div>
+
+</div>
+<div class="banner">
+          <h1><font face="Comic Sans MS" size="100" color="white">ONLINE INVENTORY MANAGEMENT
+              </font></h1>
+        </div>	
 
 
-<br><h3 id="about_us"><font color="black" face="roboto">
+<br><h3 id="about_us"><font color="black" face="Times new roman">
     <br><br><br> 
     Inventory management is a discipline primarily about specifying the 
         shape and placement of stocked goods. It is required at different locations

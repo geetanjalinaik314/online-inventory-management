@@ -53,9 +53,7 @@ public final class confirm_005forder_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("        <title>JSP Page</title>\n");
       out.write("        \n");
       out.write("        <style>  \n");
-      out.write("            body{\n");
-      out.write("                 background-image:linear-gradient(lightpink, lightgeen);\n");
-      out.write("            }\n");
+      out.write("            \n");
       out.write("           \n");
       out.write("            .center\n");
       out.write("           {\n");
@@ -129,7 +127,7 @@ public final class confirm_005forder_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("\n");
       out.write("              \n");
       out.write("               \n");
-      out.write("                      <center> <table  width=\"50%\" border=\"3\" rowspan=\"30\" colspan=\"30\" cellpadding=\"2\" cellspacing=\"5\">  \n");
+      out.write("                      <center> <table bgcolor=\"white\" width=\"50%\" border=\"3\" rowspan=\"30\" colspan=\"30\" cellpadding=\"2\" cellspacing=\"5\">  \n");
       out.write("                    <tr><td> <table width=\"50%\"  border=\"4\" rowspan=\"30\" colspan=\"30\" cellpadding=\"2\" cellspacing=\"5\">          \n");
       out.write("                    <center><h3> CONFIRM YOUR ORDER</h3></center>\n");
       out.write("                     </table>\n");

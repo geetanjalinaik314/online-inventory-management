@@ -61,18 +61,13 @@ public final class placeorder_jsp extends org.apache.jasper.runtime.HttpJspBase
 
              
             
-            try{
-                 Class.forName("com.mysql.jdbc.Driver");
-                 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory","root","");
-                Statement st=con.createStatement();
            
-                Class.forName("com.mysql.jdbc.Driver");
-                 Connection con1=DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory","root","");
-                Statement st1=con1.createStatement();
-                
                  Class.forName("com.mysql.jdbc.Driver");
                  Connection con2=DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory","root","");
                 Statement st2=con2.createStatement();
+           
+                
+                
                 
                 String name=request.getParameter("pname");
                 String qty=request.getParameter("qty");
@@ -82,43 +77,28 @@ public final class placeorder_jsp extends org.apache.jasper.runtime.HttpJspBase
                 String state1=request.getParameter("state");
                 String pincode1=request.getParameter("pincode");
                 
-               int i=st.executeUpdate("insert into order_1(pname,quantity,cname,area,city,state,pincode) values('"+name+"','"+qty+"','"+customer+"','"+area1+"','"+city1+"','"+state1+"','"+pincode1+"')");
-                
-               
-       ResultSet rs1=st1.executeQuery("select * from order_1");
-        
-              while(rs1.next())
-              {
-               
-                   ResultSet rs2=st2.executeQuery("select pnumber from product where pname='"+rs1.getString(1)+"'");
-                
-      out.write("\n");
-      out.write("                Quantity Available in the stock:\n");
-      out.write("                  ");
- out.print(rs2.getString(1));
-              }
-                   
-              
-               
-               
-               
-                if(i>0)
+               int i=st2.executeUpdate("insert into order_1(pname,quantity,cname,area,city,state,pincode) values('"+name+"','"+qty+"','"+customer+"','"+area1+"','"+city1+"','"+state1+"','"+pincode1+"')");
+             
+                int j=st2.executeUpdate("insert into order_2(pname,quantity,cname,area,city,state,pincode) values('"+name+"','"+qty+"','"+customer+"','"+area1+"','"+city1+"','"+state1+"','"+pincode1+"')");
+             
+     
+                 
+                 if(i>0)
                 {
-                    out.print("stock unavailable");
-                    //response.sendRedirect("productmanagement.jsp");
+                    //out.print("stock unavailable");
+                    response.sendRedirect("order_3.jsp");
                 }
                 else
                 {
                     out.print("error");
                    // response.sendRedirect("supplier.jsp?m=3");
                 }
-                }
-        
+                
+                
+               
+         
+                        
             
-            catch(Exception ex)
-            {
-                out.print(ex);
-            }
                         
       out.write(" \n");
       out.write("    </body>\n");

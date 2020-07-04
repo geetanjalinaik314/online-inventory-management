@@ -13,7 +13,7 @@
         
         <style>
             body{
-background-image:creamwhite;
+background-image: url("images/ba.jpg"); 
 background-repeat: no-repeat;
 background-size: cover;
 }
@@ -126,10 +126,11 @@ label{
 
 </style>
     </head>
-    <body>
-        <h2><font style="Impact">INVENTORY MANAGEMENT</font></h2>
+    <body> 
+          
+        <h2><font face="Comic Sans MS" size="10">INVENTORY MANAGEMENT</font></h2>
         <h3>We manage your orders and stock here......</h3>
-
+       
     <div class="box1">
        <ul>
             
